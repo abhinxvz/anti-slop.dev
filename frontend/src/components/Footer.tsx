@@ -9,6 +9,11 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="col-span-1 md:col-span-1 lg:col-span-2">
+            <div className="inline-flex items-center text-muted-foreground font-mono text-sm mb-6">
+              ../System/Footer../
+              <span className="inline-block w-2 h-[1em] bg-muted-foreground ml-1 align-middle animate-pulse" />
+            </div>
+            <br />
             <Link href="/" className="flex items-center gap-3 mb-6 inline-flex">
               <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center text-background font-mono text-sm font-bold">
                 {">_"}

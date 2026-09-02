@@ -46,8 +46,23 @@ export default function ShowcaseCarousel() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="max-w-7xl mx-auto px-6 relative h-[500px] flex items-center justify-center">
+      <div className="max-w-7xl mx-auto px-6 relative flex flex-col items-center">
+        {/* Terminal Header */}
+        <div className="w-full text-center mb-10">
+          <div className="inline-flex items-center text-muted-foreground font-mono text-sm mb-4">
+            ../Features/Showcase../
+            <motion.span
+              animate={{ opacity: [1, 1, 0, 0, 1] }}
+              transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+              className="inline-block w-2 h-[1em] bg-muted-foreground ml-1 align-middle"
+            />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-tight">
+            See the cleanup in action.
+          </h2>
+        </div>
         
+        <div className="relative w-full h-[500px] flex items-center justify-center">
         <AnimatePresence initial={false} mode="popLayout">
           {slides.map((slide, i) => {
             const isActive = i === currentIndex;
@@ -96,7 +111,7 @@ export default function ShowcaseCarousel() {
         >
           <ChevronRight size={24} />
         </button>
-
+        </div>
       </div>
     </section>
   );

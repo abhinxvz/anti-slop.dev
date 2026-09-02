@@ -5,7 +5,22 @@ import { siNpm } from "simple-icons";
 
 export default function InstallRow() {
   return (
-    <section className="w-full py-12 md:py-16 px-6 flex justify-center z-10 relative">
+    <section className="w-full py-24 md:py-32 px-6 flex flex-col items-center justify-center z-10 relative">
+      {/* Terminal Header */}
+      <div className="w-full text-center mb-8">
+        <div className="inline-flex items-center text-muted-foreground font-mono text-sm mb-4">
+          ../Install/Get_Started../
+          <motion.span
+            animate={{ opacity: [1, 1, 0, 0, 1] }}
+            transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+            className="inline-block w-2 h-[1em] bg-muted-foreground ml-1 align-middle"
+          />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground tracking-tight">
+          Ready to clean up?
+        </h2>
+      </div>
+
       <div className="flex flex-col sm:flex-row items-center gap-6">
         
         {/* VS Code Extension Button */}
